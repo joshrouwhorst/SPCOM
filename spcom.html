@@ -1,0 +1,35 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+    "http://www.w3.org/TR/html4/strict.dtd"
+    >
+<html lang="en">
+<head>
+    <title><!-- Insert your title here --></title>
+    <script type='text/javascript' src='http://joshrouwhorst.com/sp/jquery/jquery-1.6.4.min.js'></script>
+    <script type='text/javascript'>
+        debugger;
+        window.opener.document.getElementById('PopUp').style.display = 'block';
+    </script>
+    <style type="text/css">
+        #leftColumnWrapper, #midColumnWrapper, #rightColumnWrapper{
+            float: left;
+            height: 100%;
+        }
+        #leftColumnWrapper, #midColumnWrapper{
+            width: 25%;
+        }
+        #rightColumnWrapper{
+            width: 50%;
+        }
+        #leftColumn, #midColumn, #rightColumn{
+            margin: 10px;
+            background-color: #CCC;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div id='leftColumnWrapper'><div id='leftColumn'></div></div>
+    <div id='midColumnWrapper'><div id='midColumn'></div></div>
+    <div id='rightColumnWrapper'><div id='rightColumn'></div></div>
+</body>
+</html>

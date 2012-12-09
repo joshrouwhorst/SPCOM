@@ -1,0 +1,85 @@
+#SPCommander{
+    position:                       relative;
+    font-family:                    sans-serif;
+    color:                          #000 !important;
+    z-index:                        999;
+}
+
+#SPCommander, .SPCOM-listInfo, .SPCOM-menu-item{
+    background-color:               #83b0d9;
+}
+
+#SPCommander a:link, #SPCommander a:visited, #SPCommander a:active{
+    color:                          #000;
+    text-decoration:                none;
+}
+
+#SPCOM-exit, .SPCOM-menu-td{
+    padding:                        5px;
+}
+#SPCOM-exit{
+    float:                          right;
+}
+
+.SPCOM-menu-td{
+    width:                          17%;
+}
+
+#SPCOM-menu{
+    width:                          100%;
+}
+
+#SPCOM-frame{
+    width:                          100%;
+    height:                         100%;
+}
+
+.SPCOM-shaded, .SPCOM-listInfo-field-detail{
+    background-color:               #e9caca;
+}
+
+.SPCOM-shaded{
+    cursor:                         pointer;
+}
+
+.SPCOM-menu-container{
+    position:                       absolute;
+    display:                        none;
+    height:                         300px;
+    width:                          250px;
+    overflow:                       auto;
+    scrollbar-base-color:           #83b0d9;
+    scrollbar-highlight-color:      #000000; 
+    scrollbar-shadow-color:         #000000; 
+    scrollbar-3dlight-color:        #000000;
+    scrollbar-track-color:          #83b0d9;
+}
+
+.SPCOM-menu-item td{
+    padding:                        5px;
+}
+
+.SPCOM-listInfo{
+    width:                          700px;
+    height:                         350px;
+    text-align:                     left;
+}
+
+.SPCOM-listInfo-container{
+    position:                       absolute;
+    display:                        none;
+    top:                            100px;
+    left:                           0px;
+    width:                          100%;
+    text-align:                     center;
+    margin:                         0px;
+}
+
+.SPCOM-listInfo-commands{
+    height:                         200px;
+    overflow:                       scroll;
+}
+
+.SPCOM-listInfo-field-detail{
+    display:                        none;
+}

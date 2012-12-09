@@ -1,0 +1,65 @@
+SPCOMdiv{
+    display:                        block;
+}
+
+SPCOMspan{
+    display:                        inline;
+}
+
+SPCOMtable{
+    display:                        table;
+}
+
+SPCOMtr{
+    display:                        table-row;
+}
+
+SPCOMtd{
+    display:                        table-cell;
+}
+
+#SPCommander{
+    background-color:               #819df1;
+    position:                       relative;
+    font-family:                    sans-serif;
+    color:                          #FFF !important;
+    z-index:                        999;
+}
+
+#SPCommander a:link, #SPCommander a:visited, #SPCommander a:active{
+    color:                          #00F;
+}
+
+#SPCOM-exit, .SPCOM-menu-td{
+    padding:                        5px;
+}
+#SPCOM-exit{
+    float:                          right;
+}
+
+#SPCOM-menu{
+    width:                          100%;
+}
+
+#SPCOM-frame{
+    width:                          100%;
+    height:                         100%;
+}
+
+.SPCOM-shaded{
+    background-image:               url("http://joshrouwhorst.com/sp/imgs/bg.png");
+}
+
+.SPCOM-menu-item{
+    position:                       absolute;
+    display:                        none;
+    background-color:               #819df1;
+}
+
+.SPCOM-listInfo{
+    width:                          700px;
+    height:                         350px;
+    background-color:               #819df1;
+    display:                        none;
+    position:                       absolute;
+}

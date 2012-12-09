@@ -1,0 +1,297 @@
+/*
+1 - 69D2E7
+2 - A7DBD8
+3 - E0E4CC
+4 - F38630
+5 - FA6900
+*/
+
+body{
+    padding: 0px;
+    margin: 0px;
+    font-family: sans-serif;
+    color: #000;
+    background-color: #FC354C;
+}
+
+td, span, div, h3.listMenu{
+    font-size: 10px;
+}
+
+#spcom{
+    height: 100%;
+    width: 100%;
+    display: none;
+}
+
+#columns{
+    height: 300px;
+    margin: 0px;
+}
+
+#columnsTable{
+    width: 100%;
+}
+
+#columnsTable td{
+    width: 33%;
+}
+
+#leftColumn, #middleColumn, #rightColumn{
+    width: 100%;
+    height: 300px;
+    margin: 0px;
+    overflow: auto;
+    background-color: #FCF7C5;
+}
+
+#leftColumn div, #middleColumn div, #rightColumn div{
+    padding: 5px;
+    margin: 0px 0px 5px 0px;
+    cursor: pointer;
+}
+
+#leftColumn div{
+    background-color: #0ABFBC;
+}
+
+#middleColumn div{
+    background-color: #95d9d9;
+}
+
+#rightColumn div{
+    background-color: #abe0df;
+}
+
+#viewArea{
+    height: 210px;
+    margin: 2px 2px 2px 2px;
+}
+
+#currentView{
+    height: 100%;
+    padding: 5px;
+}
+
+#currentView, .currentTab{
+    background-color: #29221F;
+}
+
+#loading{
+    text-align: center;
+}
+
+#imgContainer{
+    margin: 0px 0px 20px 0px;
+    border: 5px solid #29221F;
+    background-color: #FCF7C5;
+    padding: 5px;
+    text-align: center;
+}
+
+#loadingOutput{
+    font-size: 20px;
+    color: #000;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#loading table{
+    height: 100%;
+    width: 100%;
+}
+
+#loadingBarContainer{
+    height: 0px;
+    padding: 0px;
+    text-align: center;
+}
+
+#loadingBar{
+    height: 0px;
+    border-bottom: 2px solid #29221F;
+    width: 0%;
+    margin: 0px auto;
+    padding: 0px;
+}
+
+#viewLogo{
+    text-align: center;
+    background-color: #FCF7C5;
+    border: 5px solid #29221F;
+    margin: 2px;
+    height: 100%;
+}
+
+#logoTable{
+    height: 62%;
+}
+
+.spcomVersion{
+    font-size: 8px;
+    text-align: center;
+}
+
+#logoMenu, table.listMenu{
+    width: 100%;
+    color: #FCF7C5;
+}
+
+#logoMenu td, table.listMenu td{
+    background-color: #29221F;
+    text-align: center;
+    padding: 5px;
+    cursor: pointer;
+}
+
+#viewTabs{
+    height: 25px;
+}
+
+.viewTab, .currentTab{
+    padding: 5px 10px;
+    margin-right: 5px;
+    cursor: pointer;
+    color: #FCF7C5;
+    height: 100%;
+}
+
+.viewTab{
+    background-color: #6c5a53;
+    border-bottom: 1px solid #5a4b45;
+}
+
+#currentViewContent{
+    background-color: #FCF7C5;
+    height: 100%;
+    padding: 10px;
+}
+
+#currentViewContent table{
+    width: 100%;
+}
+
+.listItem{
+    margin: 0px;
+    width: 95% !important;
+}
+
+.listItem-first{
+    width: 100% !important;
+}
+
+.selectedListItem{
+    background-color: #13747D !important;
+}
+
+.invisItem{
+    background-color: transparent !important;
+}
+
+div.listMenu{
+    height: 100%;
+    overflow: auto;
+}
+
+h1.listMenu{
+    font-size: 20px;
+    text-align: center;
+}
+
+table.listStats{
+    width: 100%;
+}
+
+td.listTable-side{
+    width: 200px;
+}
+
+img.listMenu{
+    cursor: pointer;
+}
+
+#status{
+    float: right;
+    padding: 5px;
+}
+
+#testQuery{
+    display: none;
+    height: 100%;
+}
+
+table.testQuery{
+    border: 2px solid #29221F;
+    background-color: #FCF7C5;
+    height: 150px;
+    width: 99%;
+    margin: 2px;
+}
+
+td.testQuery{
+    width: 85%;
+}
+
+input.testQuery{
+    height: 100%;
+    width: 100%;
+    background-color: #FCF7C5;
+    color: #29221F;
+    border: 1px solid #29221F;
+}
+
+textarea.testQuery{
+    height: 100%;
+    width: 100%;
+}
+
+#testQueryResults{
+    height: 365px;
+    border: 2px solid #29221F;
+    background-color: #FCF7C5;
+    margin: 2px;
+}
+
+#testQueryStats{
+    height: 75px;
+    overflow: auto;
+    width: 690px;
+}
+
+#testQueryStats table{
+    width: 100%;
+}
+
+#testQueryStats .label{
+    font-weight: bold;
+}
+
+#testQueryRecords{
+    height: 290px;
+    width: 690px;
+    overflow: auto;
+}
+
+#testQueryRecords table{
+    width: 100%;
+}
+
+#testQueryRecords thead{
+    font-weight: bold;
+}
+
+#testQueryRecords td{
+    border: 1px solid #dbd9ce;
+    padding: 3px;
+}
+
+#testQueryClose{
+    text-align: center;
+}
+
+#testQueryClose input{
+    background-color: #29221F;
+    border: none;
+    color: #FCF7C5;
+    cursor: pointer;
+}

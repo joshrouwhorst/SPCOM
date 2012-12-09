@@ -1,0 +1,18 @@
+body{
+    padding: 0px;
+    margin: 0px;
+}
+
+#spcom{
+    height: 100%;
+    width: 100%;
+}
+
+#leftPane, #midPane, #rightPane{
+    width: 30%;
+    float: left;
+    height: 95%;
+    margin: 5px;
+    border: 1px solid #000;
+    overflow: auto;
+}

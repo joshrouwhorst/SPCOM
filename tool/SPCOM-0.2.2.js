@@ -1129,7 +1129,7 @@ var SPCOM = (function(){
                             }
                         }
                     });
-		    
+					
                     if (listArr.items.length > 0) getItems(listArr.items.splice(0, 1)[0]);
                     else if (listArr.lists.length > 0) getLists(listArr.lists.splice(0, 1)[0]);
                     else finishedLoading();

@@ -1117,40 +1117,11 @@ var SPCOM = (function(){
                                     break;
                                 }
                                 if (firstRunForThisType){
-				    /*var insertBeforeIndex = undefined;
-				    for (var j = 0; j < UI.left.items.length && insertBeforeIndex === undefined; j++){
-					var itemType = UI.left.items[j].data.type;
-					if (itemType.common){
-					    continue;
-					}
-					else if ((!itemType.common && types[i].common) || (!itemType.common && !types[i].common && itemType.title > types[i].display)){
-					    insertBeforeIndex = j;
-					}
-				    }*/
                                     UI.left.add({title: types[i].display, type: types[i]}, lists.selectType);
                                     UI.left.refresh();
                                 }
                                 
-                                types[i].bucket[thisList.attr("Title")] = {
-                                    id: thisList.attr("ID"),
-                                    title: thisList.attr("Title"),
-                                    desc: ((thisList.attr("Description") === undefined) ? "" : thisList.attr("Description")),
-                                    enableVersion: ((thisList.attr("EnableVersioning") === "True") ? true : false),
-                                    version: thisList.attr("Version"),
-                                    hidden: ((thisList.attr("Hidden") === "True") ? true : false),
-                                    itemCount: parseInt(thisList.attr("ItemCount")),
-                                    ordered: ((thisList.attr("Ordered") === "True") ? true : false),
-                                    defView: thisList.attr("DefaultViewUrl"),
-                                    root: thisList.attr("RootFolder"),
-                                    imgUrl: thisList.attr("ImageUrl"),
-                                    modified: thisList.attr("Modified"),
-                                    created: thisList.attr("Created"),
-                                    allowDeletion: thisList.attr("AllowDeletion"),
-                                    enableAttachments: ((thisList.attr("EnableAttachments") === "True") ? true : false),
-                                    showUsers: ((thisList.attr("ShowUsers") === "True") ? true : false),
-                                    baseUrl: ((types[i].type === "Document Library") ? siteUrl + "/" + thisList.attr("Title") + "/Forms/" : siteUrl + "/Lists/" + thisList.attr("Title") + "/"),
-                                    fields: []
-                                };
+                                types[i].bucket[thisList.attr("Title")] = LIST(thisList);
                                 
                                 if (types[i].type === "Document Library" || types[i].type === "Wiki Page Library") listArr.items.push(thisList.attr("Title"));
                                 listArr.lists.push(thisList.attr("Title"));
@@ -1186,19 +1157,9 @@ var SPCOM = (function(){
     }
     
     function init(){
-        /*
-         Sends "signal" back to the parent window
-         to know that SPCOM is still running.
-         If it stops, the parent window reboots SPCOM.
-        */
-        //startBroadcasting();
         siteUrl = $().SPCOMServices.SPGetCurrentSite();
         $().SPCOMServices.defaults.webUrl = siteUrl;
         
-	/*var loadingHtml = "<div id='loading'><table><tr><td><div id='imgContainer'><img src='http://joshrouwhorst.com/sp/imgs/v0.2/spCom-600.png' /></div><div id='loadingOutput'></div><div id='loadingBarContainer'><div id='loadingBar'></div></div></td></tr></table></div>";
-        var spcomHtml = "<div id='spcom'><div id='columns'><table id='columnsTable'><tr><td><div id='leftColumn'></div></td><td><div id='middleColumn'></div></td><td><div id='rightColumn'></div></td></tr></table></div><div id='viewArea'><div id='viewTabs'></div><div id='currentView'></div></div></div><script type='text/javascript'>SPCOM.startLoading();</script>";
-        var listQueryHtml = "<div id='listQuery'><table class='listQuery'><tr><td class='listQuery'><textarea class='listQuery'></textarea></td><td><input type='button' value='Run' class='listQuery' onclick='SPCOM.listQuery.run()' /></td></tr></table><div id='listQueryResults'><div id='listQueryStats'></div><div id='listQueryRecords'><table><thead></thead><tbody></tbody></table></div></div></div>";
-        $("body").append(loadingHtml + spcomHtml + listQueryHtml);*/
         var spcomHtml = "<div id='spcom'><div id='columns'><table id='columnsTable'><tr><td><div id='leftColumn'></div></td><td><div id='middleColumn'></div></td><td><div id='rightColumn'></div></td></tr></table></div><div id='viewArea'><div id='viewTabs'></div><div id='currentView'></div></div></div><script type='text/javascript'>SPCOM.startLoading();</script>";
         var listQueryHtml = "<div id='listQuery'><table class='listQuery'><tr><td class='listQuery'><textarea class='listQuery'></textarea></td><td><input type='button' value='Run' class='listQuery' onclick='SPCOM.listQuery.run()' /></td></tr></table><div id='listQueryResults'><div id='listQueryStats'></div><div id='listQueryRecords'><table cellspacing='0px'><thead></thead><tbody></tbody></table></div></div><div id='listQueryClose'><input type='button' value='Close' onclick='SPCOM.listQuery.close()' /> <input type='button' value='Delete' onclick='SPCOM.listQuery.deleteItems()' /></div></div>";
         $("body").append(spcomHtml + listQueryHtml);
@@ -1225,3 +1186,26 @@ function spLoading(){
 }
 
 spLoading();
+
+var LIST = function(record){
+	var thisList = this;
+	
+	this.id = record.attr("ID");
+	this.title = record.attr("Title");
+	this.desc = ((record.attr("Description") === undefined) ? "" : record.attr("Description"));
+	this.enableVersion = ((record.attr("EnableVersioning") === "True") ? true : false);
+	this.version = record.attr("Version");
+	this.hidden = ((record.attr("Hidden") === "True") ? true : false);
+	this.itemCount = parseInt(record.attr("ItemCount"));
+	this.ordered = ((record.attr("Ordered") === "True") ? true : false);
+	this.defView = record.attr("DefaultViewUrl");
+	this.root = record.attr("RootFolder");
+	this.imgUrl = record.attr("ImageUrl");
+	this.modified = record.attr("Modified");
+	this.created = record.attr("Created");
+	this.allowDeletion = record.attr("AllowDeletion");
+	this.enableAttachments = ((record.attr("EnableAttachments") === "True") ? true : false);
+	this.showUsers = ((record.attr("ShowUsers") === "True") ? true : false);
+	this.baseUrl = ((types[i].type === "Document Library") ? siteUrl + "/" + record.attr("Title") + "/Forms/" : siteUrl + "/Lists/" + record.attr("Title") + "/");
+	this.fields = [];
+};

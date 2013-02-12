@@ -12,7 +12,7 @@ var SPCOMload = (function(){
             var jqueryTag = document.createElement("script");    
             jqueryTag.type = "text/javascript";
             document.body.appendChild(jqueryTag);
-            jqueryTag.src = "http://joshrouwhorst.com/sp/jquery/jquery-1.6.4.js";
+            jqueryTag.src = "https://raw.github.com/joshrouwhorst/SPCOM/master/jquery/jquery-1.6.4.js";
             //jqueryTag.src = "https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.js";
         }
         loadSpserv();
@@ -25,7 +25,7 @@ var SPCOMload = (function(){
                     var spservTag = document.createElement("script");
                     spservTag.type = "text/javascript";
                     document.body.appendChild(spservTag);
-                    spservTag.src = "http://joshrouwhorst.com/sp/spservices/jquery.SPServices-0.6.2.js";
+                    spservTag.src = "https://raw.github.com/joshrouwhorst/SPCOM/master/spservices/jquery.SPServices-0.6.2.js";
                 }
                 loadSpcom();
             }
@@ -56,7 +56,7 @@ var SPCOMload = (function(){
             var spservTag = document.createElement("script");
             spservTag.type = "text/javascript";
             document.body.appendChild(spservTag);
-            spservTag.src = "http://joshrouwhorst.com/sp/tool/SPCOM-backDrop-0.2.2.js";
+            spservTag.src = "https://raw.github.com/joshrouwhorst/SPCOM/master/tool/SPCOM-backDrop-0.2.2.js";
         }
     }
     

@@ -16,6 +16,7 @@ var SPCOM = (function(){
             {title: "Default", url: "default.aspx"},
             {title: "All Site Content", url: "_layouts/viewlsts.aspx"}
         ],
+	mainUrl = "https://raw.github.com/joshrouwhorst/SPCOM/master",
         siteUrl,
         PARENT_WINDOW = window.opener.parent,
         MAX_LIST_SIZE = 100,
@@ -145,7 +146,7 @@ var SPCOM = (function(){
                 viewTabs = "<div id='viewTabs'><span id='status'></span></div>";
             
             var clear = function(){
-                $("#viewArea").html(viewTabs + "<div id='viewLogo'><table id='logoTable'><tr><td><img src='http://joshrouwhorst.com/sp/imgs/v0.2/spCom-150.png' /><div class='spcomVersion'>v" + version + "</div></td></tr></table><table id='logoMenu'><tr><td onclick='SPCOM.link(\"" + siteUrl +
+                $("#viewArea").html(viewTabs + "<div id='viewLogo'><table id='logoTable'><tr><td><img src='" + mainUrl + "/imgs/v0.2/spCom-150.png' /><div class='spcomVersion'>v" + version + "</div></td></tr></table><table id='logoMenu'><tr><td onclick='SPCOM.link(\"" + siteUrl +
                                     "/_layouts/viewlsts.aspx\")'>All Site Content</td><td onclick='SPCOM.link(\"" + siteUrl +
                                     "/default.aspx\")'>Default</td><td onclick='SPCOM.link(\"" + siteUrl +
                                     "/_layouts/settings.aspx\")'>Site Settings</td></tr><tr><td onclick='SPCOM.link(\"" + siteUrl +
@@ -1174,7 +1175,7 @@ var SPCOM = (function(){
     
     function newPage(){
         PARENT_WINDOW.document.spcom = document.spcom;
-        $(PARENT_WINDOW.document.body).append("<script type='text/javascript' href='http://joshrouwhorst.com/sp/tool/SPCOM-backDrop-0.2.0.js'></script>");
+        $(PARENT_WINDOW.document.body).append("<script type='text/javascript' href='" + mainUrl + "/tool/SPCOM-backDrop-0.2.0.js'></script>");
     }
     
     function startBroadcasting(){

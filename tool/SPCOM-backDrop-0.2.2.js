@@ -1,6 +1,6 @@
 var SPCOM_PAGE = function(){
     var version = "0.2.2",
-        branch = "angularjs",
+        branch = "AngularJS-Updates",
         spcomServerUrl = "https://raw.github.com/joshrouwhorst/SPCOM/" + branch,
         jqueryVersion = "-1.7.2",
         spservicesVersion = "-0.7.1a",

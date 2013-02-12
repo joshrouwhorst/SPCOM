@@ -4,8 +4,8 @@
 */
 
 var SPCOMload = (function(){
-    var branch = "angularjs",
-        mainUrl = "https://raw.github.com/joshrouwhorst/spcom/" + branch,
+    var branch = "AngularJS-Update",
+        mainUrl = "https://raw.github.com/joshrouwhorst/SPCOM/" + branch,
         version = "0.2.2";
     
     var spservTag = document.createElement("script");

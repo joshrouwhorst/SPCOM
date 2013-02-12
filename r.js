@@ -1,78 +1,16 @@
 /*
- SP Commander by Josh Rouwhorst
+ SPCOM by Josh Rouwhorst
  Loader File
 */
 
 var SPCOMload = (function(){
-    function loadJquery(){
-        try{
-            if (jQuery){}
-        }
-        catch(e){
-            var jqueryTag = document.createElement("script");    
-            jqueryTag.type = "text/javascript";
-            document.body.appendChild(jqueryTag);
-            jqueryTag.src = "http://joshrouwhorst.com/sp/jquery/jquery-1.6.4.js";
-            //jqueryTag.src = "https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.js";
-        }
-        loadSpserv();
-    }
+    var branch = "angularjs",
+        mainUrl = "https://raw.github.com/joshrouwhorst/spcom/" + branch,
+        version = "0.2.2";
     
-    function loadSpserv(){
-        try{
-            if (jQuery){
-                if (!$().SPCOMServices){
-                    var spservTag = document.createElement("script");
-                    spservTag.type = "text/javascript";
-                    document.body.appendChild(spservTag);
-                    spservTag.src = "http://joshrouwhorst.com/sp/spservices/jquery.SPServices-0.6.2.js";
-                }
-                loadSpcom();
-            }
-            else{
-                throw "Error";
-            }
-        }
-        catch(e){
-            setTimeout(loadSpserv, 100);
-        }
-    }
+    var spservTag = document.createElement("script");
+    spservTag.type = "text/javascript";
+    document.body.appendChild(spservTag);
+    spservTag.src = mainUrl + "/tool/SPCOM-backDrop-" + version + ".js";
     
-    function loadSpcom(){
-        try{
-            if ($().SPCOMServices){
-                if (SPCOM === undefined){
-                    throw "Error";
-                }
-                else{
-                    SPCOM.init();
-                }
-            }
-            else{
-                setTimeout(loadSpcom, 100);
-            }
-        }
-        catch(e){
-            var spservTag = document.createElement("script");
-            spservTag.type = "text/javascript";
-            document.body.appendChild(spservTag);
-            spservTag.src = "http://joshrouwhorst.com/sp/tool/SPCOM-backDrop-0.2.2.js";
-        }
-    }
-    
-    return {
-        loadJquery: loadJquery
-    }
 }());
-
-try{
-    if (SPCOM !== undefined){
-        SPCOM.exit();
-    }
-    else{
-       throw "Error";
-    }
-}
-catch(e){
-    SPCOMload.loadJquery();
-}

@@ -12,4 +12,6 @@
     spservTag.type = "text/javascript";
     document.body.appendChild(spservTag);
     spservTag.src = mainUrl + "/tool/SPCOM-backDrop-" + version + ".js";
+    
+    alert("r.js");
 }());

@@ -16,4 +16,6 @@
     spcom = window.open("", "SPCOM" + rand, "status=0,location=0,toolbar=0,menubar=0,resizeable=0,width=700,height=550");
     spcom.document.spcom = spcom;
     spcom.document.write(spcomHtml);
+    
+    alert("backdrop");
 })();

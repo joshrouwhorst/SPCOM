@@ -1,7 +1,10 @@
 var SPCOM_PAGE = function(){
     var version = "0.2.2",
-        spcomHtml = "<html><head><link href='http://joshrouwhorst.com/sp/css/SPCOM-" + version + ".css' rel='stylesheet' type='text/css' /><script type='text/javascript' src='http://joshrouwhorst.com/sp/jquery/jquery-1.7.2.js'></script><script type='text/javascript' src='http://joshrouwhorst.com/sp/spservices/jquery.SPServices-0.7.1a.js'></script><script type='text/javascript' src='http://joshrouwhorst.com/sp/tool/SPCOM-" + version + ".js'></script></head><body></body></html>",
-        rand = parseInt(Math.random() * 1000),
+        spcomServerUrl = "https://raw.github.com/joshrouwhorst/SPCOM",
+        jqueryVersion = "-1.7.2",
+        spservicesVersion = "-0.7.1a",
+        spcomHtml = "<html><head><link href='" + spcomServerUrl + "/css/SPCOM-" + version + ".css' rel='stylesheet' type='text/css' /><script type='text/javascript' src='" + spcomServerUrl + "/jquery/jquery" + jqueryVersion + ".js'></script><script type='text/javascript' src='" + spcomServerUrl + "/spservices/jquery.SPServices" + spservicesVersion + ".js'></script><script type='text/javascript' src='" + spcomServerUrl + "/tool/SPCOM-" + version + ".js'></script></head><body></body></html>",
+        rand = parseInt(Math.random() * 1000, 10),
         spcom;
     
     function init(){        

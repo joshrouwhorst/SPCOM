@@ -14,3 +14,5 @@ This tool was written initially to help simply navigate any SharePoint
 site on the fly without needing to install any software.  It has turned
 into a tool not just for navigation but for displaying information useful
 for SharePoint development.
+
+This is still a work-in-progress.
